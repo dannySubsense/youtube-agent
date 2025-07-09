@@ -66,7 +66,6 @@ This project integrates with a powerful **YouTube MCP Server** that provides rea
 - Python 3.8+
 - YouTube Data API v3 key
 - OpenAI API key
-- Supabase account (optional, for persistence)
 - **No external database required** - uses local Chroma vector database
 
 ### Installation
@@ -84,18 +83,11 @@ This project integrates with a powerful **YouTube MCP Server** that provides rea
    uv pip install -r requirements.txt
    ```
 
-3. **Set up environment variables**
-   ```bash
-   # Copy and configure environment file
-   cp .env.example .env
-   # Edit .env with your API keys
-   ```
-
-4. **Configure YouTube MCP Server**
-   ```bash
-   # Set up YouTube API credentials
-   cp youtube_mcp_server/credentials.yml.example youtube_mcp_server/credentials.yml
-   # Add your YouTube Data API key to credentials.yml
+3. **Set up credentials**
+   Create a `credentials.yml` file in the project root with your API keys:
+   ```yaml
+   youtube: 'your-youtube-api-key-here'
+   openai: 'your-openai-api-key-here'
    ```
 
 ### Running the Application
@@ -239,25 +231,17 @@ black . && flake8 && mypy . && pytest
 
 ## 🔧 Configuration
 
-### Environment Variables
+### Credentials Configuration
 
-```bash
-# Required
-OPENAI_API_KEY=your_openai_api_key
-YOUTUBE_API_KEY=your_youtube_api_key
-
-# Optional
-SUPABASE_URL=your_supabase_url
-SUPABASE_ANON_KEY=your_supabase_key
-```
-
-### MCP Server Configuration
+Create a `credentials.yml` file in the project root:
 
 ```yaml
-# youtube_mcp_server/credentials.yml
-youtube:
-  api_key: "your_youtube_data_api_v3_key"
+# Required
+youtube: 'your-youtube-api-key-here'
+openai: 'your-openai-api-key-here'
 ```
+
+**Note**: The system uses a local `credentials.yml` file instead of environment variables for API key management. This file is automatically ignored by git for security.
 
 ## 🤝 Contributing
 
