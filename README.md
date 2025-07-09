@@ -196,13 +196,7 @@ mypy .
 black . && flake8 && mypy . && pytest
 ```
 
-### Development Philosophy
 
-- **Incremental Development**: One feature at a time, one step at a time
-- **SDD Alignment**: All changes must align with System Design Document
-- **MVP Preservation**: Maintain proven MVP workflow while adding enhancements
-- **Modular Architecture**: Clean separation between core, MCP, agents, and UI layers
-- **Test-Driven Development**: Write tests before implementation
 
 ## 📊 Features
 
