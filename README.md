@@ -94,7 +94,7 @@ This project integrates with a powerful **YouTube MCP Server** that provides rea
 
 #### Option 1: Modular Architecture (Recommended)
 ```bash
-uv run streamlit run ui/streamlit/dashboard.py
+uv run streamlit run ui/streamlit/streamlit_runner.py
 ```
 
 #### Option 2: MVP Version (Reference)
