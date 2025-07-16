@@ -27,7 +27,7 @@ The system uses a modular architecture with clear separation of concerns:
 
 ## 🎬 YouTube MCP Server Integration
 
-This project integrates with a powerful **YouTube MCP Server** that provides real-time YouTube Data API access. The MCP server features:
+This project integrates with a custom **YouTube MCP Server** that provides real-time YouTube Data API access. The MCP server features:
 
 ### 14 Complete Functions
 
